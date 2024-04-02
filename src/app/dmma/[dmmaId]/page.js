@@ -1,7 +1,19 @@
 import dataList from '../../../assets/data.json'
 
+export function generateStaticParams() {
+  return [
+    { dmmaId: '1' },
+    { dmmaId: '2' },
+    { dmmaId: '3' },
+    { dmmaId: '4' },
+    { dmmaId: '5' },
+    { dmmaId: '6' },
+  ]
+}
+
 export default function DmmaDetail({ params }) {
-  const detail = dataList[params.dmmaId - 1]
+  const { dmmaId } = params
+  const detail = dataList[dmmaId - 1]
 
   return (
     <div className="p-4 sm:ml-64">
